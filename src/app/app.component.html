@@ -1,0 +1,10 @@
+<h1>A todo list:</h1>
+
+<div *ngIf="data | async">
+  <div *ngFor="let item of data | async">
+    {{ item.taskName }}
+    {{ item.time }}
+  </div>
+</div>
+
+<child></child>
