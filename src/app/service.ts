@@ -11,11 +11,13 @@ interface Options {
  * Implement app.component to use dateFormat from this options to render the date
  */
 const options: Options = {
-  dateFormat: null,
+  dateFormat: "",
   capitalize: false,
 };
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 class BackendService {
   /**
    * Imagine it is API call to a backend
